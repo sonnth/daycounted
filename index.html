@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>daycounted</title>
+</head>
+<body>
+<form>
+     Tính số ngày:<br>
+    <input id="txtDay" type="text" name=""><br>
+    <button id="btnTinh" type="button" onclick="tinh()">Tính
+    </button>
+</form>
+<script>
+    function tinh() {
+        let month = Number(document.getElementById("txtDay").value);
+        switch (month) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12 :
+                alert('Có 31 ngày');
+                break;
+            case 2:
+                alert('Tháng 2 có 28 hoặc 29 ngày');
+                break;
+            default:
+                alert('Có 30 ngày');
+        }
+    }
+</script>
+</body>
+</html>
